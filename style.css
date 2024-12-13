@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Rubik+Mono+One&display=swap');
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #63B3ED;   
+    
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #63B3ED;  
+    border-radius: 20px;     
+    border: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background: linear-gradient(to right, rgb(66, 98, 140), #a4ccde);
+    color: #F5F7FA ;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre el título y el menú */
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #3a4568;
+    border-top-right-radius: 130px;
+    border-bottom-right-radius: 130px; /* Redondea solo el borde derecho */
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Limelight';
+    max-width: 95%;
+    margin-left: 0; /* Asegura que el encabezado esté pegado al borde izquierdo */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.menu:hover + .menu-dropdown,
+.menu-container:hover .menu-dropdown {
+    display: block; /* Muestra el menú al pasar el cursor */
+}
+
+.menu-dropdown {
+    display: none; /* Oculta el menú inicialmente */
+    position: absolute;
+    right: 0;
+    top: 100%; /* Aparece justo debajo del botón */
+    background-color: #475974;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    list-style: none;
+}
+
+.menu-dropdown li {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+.menu-dropdown li a {
+    text-decoration: none;
+    color: rgb(242, 236, 236);
+    font-size: 1rem;
+}
+
+.menu-dropdown li a:hover {
+    text-decoration: underline;
+}
+
+
+h2, p, header {
+    margin: 0;
+}
+
+
+img {
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.main__title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.cards-list {
+    display: flex;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    column-gap: 50px;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    transition: 0.2s;
+    background: #34495E;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.card__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+
+.card__text {
+    border-top: 1px solid rgba(255, 253, 253, 1);
+    width: inherit;
+    display: flex;
+    padding: 50px 0 20px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.card__title {
+    padding: 0 20px;
+    text-align: center;
+    color: #F5F7FA ;
+}
+.card__subtitle {
+    padding: 0 20px;
+    text-align: center;
+    color: #F5F7FA ;
+}
+
+.card__img {
+    padding: 30px;
+}
+
+.creat__link {
+    display: block;
+    width: inherit;
+    height: inherit;
+    background: url(../img/plus.svg) no-repeat;
+    background-size: 200px 200px;
+    background-position: center;
+}
+
+.card--creat:hover,
+.card:hover {
+    box-shadow: 0px 4px 10px rgb(37, 214, 250);
+}
+
+.creat-form {
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.form__card {
+    width: 40%;
+    padding: 0 20px 20px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    background: #34495E;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.form__inputs label {
+    width: 80%;
+}
+
+.form__input {
+    background: #F8FAFC;
+    border-radius: 10px;
+    padding: 10px;
+    height: 30px;
+    color: #0f172a;
+    font: inherit;
+    border: none;
+    width: 94%;
+}
+
+.form__card label {
+    width: 80%;
+}
+
+.form__text {
+    background: #F8FAFC;
+    border-radius: 10px;
+    padding: 10px;
+    color: #34495E;
+    font: inherit;
+    border: none;
+    width: 94%;
+}
+
+.form__button {
+    border: 1px solid rgba(15, 23, 42, 1);
+    background: #F8FAFC;
+    border-radius: 10px;
+    color: rgba(15, 23, 42, 1);
+    padding: 10px;
+    font: inherit;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form__button:hover {
+    color: #F8FAFC;
+    background:  #63B3ED ;
+}
+
+.main {
+    padding: 0 5%;
+}
+
+.main__block {
+    background: #34495E;
+    border-radius: 20px;
+    border-width : 1px solid#63B3ED;
+    border-color : #63B3ED;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main__text {
+    line-height: 30px;
+    margin-bottom: 40px;
+    white-space: pre-wrap;
+    align-self: flex-start;
+}
+
+.main__link {
+    display: block;
+    border: 1px solid rgba(15, 23, 42, 1);
+    background: #F8FAFC;
+    border-radius: 10px;
+    color: rgba(15, 23, 42, 1);
+    padding: 15px 10px;
+    font: inherit;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main__link:hover {
+    color: #F8FAFC;
+    background:  #15e4ff96 ;
+}
+
+.help_button {
+    border: 1px solid rgba(15, 23, 42, 1);
+    background: #F8FAFC;
+    border-radius: 10px;
+    margin: 5%;
+    color: rgba(15, 23, 42, 1);
+    padding: 10px;
+    font: inherit;
+    width: 200px;
+    height: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline-block;
+    justify-content: center; 
+    align-items: center;
+}
+
+.help_button:hover {
+    color: #F8FAFC;
+    background:  #FF6F61;
+}
